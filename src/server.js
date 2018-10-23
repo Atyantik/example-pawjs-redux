@@ -1,12 +1,27 @@
-import React from 'react';
+import ReduxServer from '@pawjs/redux/server';
+import * as AppReducers from './app/reducers';
+
+const AppInitialState = {
+  counter: {
+    count: 5,
+  },
+};
+
 
 export default class Server {
+  constructor({ addPlugin }) {
+    const reduxServer = new ReduxServer({ addPlugin });
+    reduxServer.setReducers(AppReducers);
+    addPlugin(reduxServer);
+  }
+
   apply(serverHandler) {
-    serverHandler.hooks.beforeHtmlRender.tap('AddFontAwesomeIcons', (Application) => {
-      Application.htmlProps.head.push(
-        <script key="Font-Awesome Icons" async src="https://use.fontawesome.com/releases/v5.0.3/js/all.js" />,
-      );
-      return Application;
-    });
+    serverHandler
+      .hooks
+      .reduxInitialState
+      .tapPromise('AppInitialState', async ({ getInitialState, setInitialState }) => {
+        const initialState = Object.assign({}, getInitialState(), AppInitialState);
+        setInitialState(initialState);
+      });
   }
 }
