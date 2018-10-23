@@ -1,0 +1,41 @@
+{
+  "name": "example-pawjs-redux",
+  "version": "1.0.0",
+  "description": "Example on using Redux with PawJS",
+  "scripts": {
+    "start": "pawjs --env=development start",
+    "build": "pawjs --env=production --config=prod.pawconfig.json build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atyantik/example-pawjs-redux.git"
+  },
+  "author": {
+    "name": "Atyantik Technologies",
+    "email": "admin@atyantik.com",
+    "url": "https://www.atyantik.com/"
+  },
+  "engines": {
+    "node": ">=10.11.0"
+  },
+  "contributors": [
+    {
+      "name": "Tirth Bodawala",
+      "email": "tirthbodawala@atyantik.com",
+      "url": "https://www.atyantik.com/"
+    },
+    {
+      "name": "Yash Thakur",
+      "email": "thakur.yash514@gmail.com",
+      "url": "http://yashthakur.in/"
+    }
+  ],
+  "devDependencies": {
+    "@pawjs/pawjs": "^2.2.3"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Atyantik/example-pawjs-redux/issues"
+  },
+  "homepage": "https://github.com/Atyantik/example-pawjs-redux#readme"
+}
