@@ -13,7 +13,7 @@ export default class Routes {
       {
         path: '/',
         exact: true,
-        component: import('./app/components/home'),
+        component: import('./app/components/home/home'),
       },
     ];
 
