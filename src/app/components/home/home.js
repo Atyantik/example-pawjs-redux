@@ -4,30 +4,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { decrementCounter, incrementCounter } from './actions';
 
-
-const styles = {
-  container: {
-    textAlign: 'center',
-    marginTop: '30px',
-  },
-  title: {
-    fontSize: '38px',
-  },
-  btn: {
-    margin: '18px',
-    backgroundColor: '#008CBA',
-    border: 'none',
-    padding: '12px 28px',
-    color: '#ffffff',
-    fontSize: '16px',
-    fontWeight: '800',
-  },
-  value: {
-    fontSize: '24px',
-    fontWeight: '900',
-  },
-
-};
+// import custom CSS
+import styles from './home.css';
 
 export default @connect(state => ({
   counterValue: _.get(state.counter, 'count', 0),
@@ -62,18 +40,18 @@ class Home extends Component {
   render() {
     const { counterValue } = this.props;
     return (
-      <div style={styles.container}>
-        <h1 style={styles.title}>Redux Counter</h1>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Redux Counter</h1>
         <div>
-          <button type="button" onClick={e => this.incrementCounter(e)} style={styles.btn}>
+          <button type="button" onClick={e => this.incrementCounter(e)} className={styles.btn}>
             Increment Counter
           </button>
         </div>
-        <div style={styles.value}>
+        <div className={styles.value}>
           {counterValue}
         </div>
         <div>
-          <button type="button" onClick={e => this.decrementCounter(e)} style={styles.btn}>
+          <button type="button" onClick={e => this.decrementCounter(e)} className={styles.btn}>
             Decrement Counter
           </button>
         </div>
