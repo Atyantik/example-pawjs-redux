@@ -1,5 +1,5 @@
 {
-  "port": "9001",
+  "port": "9005",
   "host": "0.0.0.0",
   "appRootUrl": "/examples/redux",
   "serviceWorker": false,
