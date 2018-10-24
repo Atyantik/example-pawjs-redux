@@ -74,7 +74,7 @@ class Home extends Component {
         </div>
         <div className={styles.mt}>
           <a
-            href="https://github.com/Atyantik/example-pawjs-tailwind.git"
+            href="https://github.com/Atyantik/example-pawjs-redux.git"
             className={classNames(styles.btn, styles.black)}
           >
             View source code
