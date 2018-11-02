@@ -1,3 +1,6 @@
+body{
+    font-family: sans-serif;
+}
 .container {
     text-align: center;
     margin-top: 30px;
@@ -51,6 +54,7 @@
 .col8{
     width: 60%;
     float: left;
+    text-align: left;
 }
 .col4{
     width: 40%;
@@ -61,7 +65,7 @@
     float: left;
 }
 .p1 {
-    padding: 1rem;
+    padding: 1rem 0;
 }
 .p2 {
     padding: 2rem 0;
