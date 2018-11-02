@@ -9,7 +9,7 @@
 }
 .btn {
     margin: 18px;
-    background-color: #008CBA;
+    background-color: #308CBA;
     border: none;
     padding: 12px 28px;
     color: #ffffff;
@@ -32,6 +32,12 @@
     max-width: 500px;
     margin: 0 auto;
 }
+.mw800{
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-top: 1px solid #000;
+}
 .col12{
     width: 100%;
     float: left;
@@ -42,9 +48,23 @@
     float: left;
     text-align: right;
 }
+.col8{
+    width: 60%;
+    float: left;
+}
+.col4{
+    width: 40%;
+    float: left;
+}
 .col6md{
     width: 50%;
     float: left;
+}
+.p1 {
+    padding: 1rem;
+}
+.p2 {
+    padding: 2rem 0;
 }
 .mt{
     margin-top: 3rem;
@@ -53,8 +73,21 @@
     background-color: black;
     text-decoration: none;
 }
+.link{
+    text-decoration: none;
+    color: #308CBA;
+    font-weight: 600;
+}
 @media (max-width: 575px) {
     .col6{
+        width: 100%;
+        text-align: center;
+    }
+    .col4{
+        width: 100%;
+        text-align: center;
+    }
+    .col8{
         width: 100%;
         text-align: center;
     }
