@@ -43,7 +43,7 @@ class Home extends Component {
     return (
       <div className={styles.container}>
         <div className={styles.mw500}>
-          <h1 className={styles.title}>Redux counter</h1>
+          <h1 className={styles.title}>Redux + ReactPWA</h1>
           <div className={styles.row}>
             <div className={styles.col6}>
               <div className={styles.row}>
