@@ -1,19 +1,15 @@
 import ReduxServer from '@pawjs/redux/server';
-import * as AppReducers from './app/reducers';
+import * as reducers from './app/reducers';
 import React from 'react';
 import FavIcon from './resources/img/favicon.ico';
 
-const AppInitialState = {
-  counter: {
-    count: 5,
-  },
-};
+const appInitialState = {};
 
 
 export default class Server {
   constructor({ addPlugin }) {
     const reduxServer = new ReduxServer({ addPlugin });
-    reduxServer.setReducers(AppReducers);
+    reduxServer.setReducers(reducers);
     addPlugin(reduxServer);
   }
 
@@ -22,7 +18,7 @@ export default class Server {
       .hooks
       .reduxInitialState
       .tapPromise('AppInitialState', async ({ getInitialState, setInitialState }) => {
-        const initialState = Object.assign({}, getInitialState(), AppInitialState);
+        const initialState = Object.assign({}, getInitialState(), appInitialState);
         setInitialState(initialState);
       });
 

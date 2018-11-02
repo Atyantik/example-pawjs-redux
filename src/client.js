@@ -2,11 +2,7 @@ import ReduxClient from '@pawjs/redux/client';
 import * as AppReducers from './app/reducers';
 
 
-const AppInitialState = {
-  counter: {
-    count: 5,
-  },
-};
+const appInitialState = {};
 
 export default class Client {
   trackPageView() {
@@ -31,7 +27,7 @@ export default class Client {
       .hooks
       .reduxInitialState
       .tapPromise('ReduxInitialState', async ({ getInitialState, setInitialState }) => {
-        const initialState = Object.assign({}, getInitialState(), AppInitialState);
+        const initialState = Object.assign({}, getInitialState(), appInitialState);
         setInitialState(initialState);
       });
 
