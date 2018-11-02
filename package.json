@@ -40,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/Atyantik/example-pawjs-redux/issues"
   },
-  "homepage": "https://github.com/Atyantik/example-pawjs-redux#readme"
+  "homepage": "https://github.com/Atyantik/example-pawjs-redux#readme",
+  "dependencies": {
+    "classnames": "^2.2.6"
+  }
 }

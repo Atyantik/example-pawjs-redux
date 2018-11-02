@@ -4,6 +4,8 @@
 }
 .title {
     font-size: 38px;
+    text-align: left;
+    margin-bottom: 0;
 }
 .btn {
     margin: 18px;
@@ -13,8 +15,57 @@
     color: #ffffff;
     font-size: 16px;
     font-weight: 800;
+    margin-left: 0;
 }
 .value {
-    font-size: 24px;
+    font-size: 180px;
     font-weight: 900;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.mw500{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.col12{
+    width: 100%;
+    float: left;
+    text-align: left;
+}
+.col6{
+    width: 50%;
+    float: left;
+    text-align: right;
+}
+.col6md{
+    width: 50%;
+    float: left;
+}
+.mt{
+    margin-top: 3rem;
+}
+.black{
+    background-color: black;
+    text-decoration: none;
+}
+@media (max-width: 575px) {
+    .col6{
+        width: 100%;
+        text-align: center;
+    }
+    .value{
+        font-size: 100px;
+    }
+    .col12{
+        text-align: center;
+    }
+    .title{
+        text-align: center;
+    }
+
 }
